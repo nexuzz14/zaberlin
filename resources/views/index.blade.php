@@ -5,6 +5,7 @@
 
 @section('content')
 
+@if(empty($category))
 {{-- ===== HERO SECTION ===== --}}
 @if($heroVideo)
 <section class="hero-section relative min-h-[85vh] lg:min-h-screen flex items-center overflow-hidden" id="hero">
@@ -129,10 +130,11 @@
     </div>
 </section>
 @endif
+@endif
 
 {{-- ===== FILTERED CONTENT ===== --}}
 @if(isset($filteredVideos) && $filteredVideos)
-<section class="py-12 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="pt-28 pb-12 lg:pt-36 lg:pb-16 max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center gap-4 mb-8">
         <div class="w-1 h-8 rounded-full {{ $category === 'podcast' ? 'bg-red-600' : 'bg-blue-500' }}"></div>
         <h2 class="font-outfit font-800 text-2xl lg:text-3xl">
