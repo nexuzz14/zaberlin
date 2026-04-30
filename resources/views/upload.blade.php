@@ -12,7 +12,7 @@
         Kembali ke Beranda
       </a>
       <h1 class="font-outfit font-800 text-3xl lg:text-4xl text-white">Upload Video</h1>
-      <p class="text-slate-400 mt-2">Bagikan konten podcast atau edukasi kamu ke Zaberlin TV</p>
+      <p class="text-slate-400 mt-2">Bagikan karya dan konten terbaik kamu ke Zaberlin TV</p>
     </div>
 
     <form action="{{ route('video.store') }}" method="POST" enctype="multipart/form-data" id="upload-form" class="space-y-6">

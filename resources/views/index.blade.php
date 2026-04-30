@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', isset($category) && $category ? ucfirst($category) . ' - Zaberlin TV' : 'Zaberlin TV')
-@section('meta_description', 'Tonton podcast dan video edukasi pilihan di Zaberlin TV. Platform streaming gratis terbaik Indonesia.')
+@section('meta_description', 'Tonton podcast, video edukasi, variety show, dan iklan komersial pilihan di Zaberlin TV. Platform streaming gratis terbaik Indonesia.')
 
 @section('content')
 
