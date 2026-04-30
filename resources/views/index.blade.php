@@ -23,10 +23,10 @@
 
     {{-- Hero Content — 2 kolom --}}
     <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
             {{-- Kolom Kiri: Sinopsis & CTA --}}
-            <div class="order-2 lg:order-1">
+            <div class="order-2 lg:order-1 lg:col-span-8 xl:col-span-8">
                 {{-- Category badge --}}
                 <div class="flex items-center gap-3 mb-5">
                     <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest {{ $heroVideo->category === 'podcast' ? 'bg-red-600' : 'bg-blue-600' }} text-white">
@@ -57,7 +57,7 @@
                 </p>
 
                 {{-- Synopsis --}}
-                <p class="text-slate-300 text-sm lg:text-base leading-relaxed mb-8 max-w-lg line-clamp-3">
+                <p class="text-slate-300 text-sm lg:text-base leading-relaxed mb-8 max-w-none line-clamp-3">
                     {{ $heroVideo->description ?? 'Saksikan konten terbaik dari Zaberlin TV. Podcast inspiratif dan video edukasi berkualitas tinggi untuk memperluas wawasanmu.' }}
                 </p>
 
@@ -71,20 +71,11 @@
                         </span>
                         Putar Sekarang
                     </a>
-
-                    <a href="{{ route('video.show', $heroVideo) }}"
-                       class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm lg:text-base bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white transition-all duration-300 border border-white/20 hover:border-white/40"
-                       id="hero-info-btn">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        Info Lebih Lanjut
-                    </a>
                 </div>
             </div>
 
             {{-- Kolom Kanan: Poster Menonjol --}}
-            <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+            <div class="order-1 lg:order-2 flex justify-center lg:justify-end lg:col-span-4 xl:col-span-4">
                 <div class="hero-poster relative w-64 sm:w-80 lg:w-96 xl:w-[420px]">
                     {{-- Glow effect --}}
                     <div class="absolute inset-0 rounded-2xl blur-2xl opacity-40 scale-95"

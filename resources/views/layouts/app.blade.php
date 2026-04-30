@@ -20,8 +20,10 @@
         <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16 lg:h-18">
 
-                <!-- Logo -->
-                <a href="{{ route('home') }}" class="flex items-center gap-2 group flex-shrink-0" id="nav-logo">
+                <!-- Left Side: Logo & Nav Links -->
+                <div class="flex items-center gap-6 lg:gap-10">
+                    <!-- Logo -->
+                    <a href="{{ route('home') }}" class="flex items-center gap-2 group flex-shrink-0" id="nav-logo">
                     <div class="w-8 h-8 lg:w-9 lg:h-9 rounded-lg flex items-center justify-center zaberlin-gradient shadow-lg group-hover:scale-110 transition-transform duration-300">
                         <svg class="w-4 h-4 lg:w-5 lg:h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
@@ -101,6 +103,7 @@
                             </a>
                         </div>
                     </div>
+                </div>
                 </div>
 
                 <!-- Right -->
