@@ -22,14 +22,22 @@ class VideoController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
+        $varietyShows = Video::where('category', 'variety show')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        $iklanKomersial = Video::where('category', 'iklan komersial')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
         $filteredVideos = null;
-        if ($category && in_array($category, ['podcast', 'edukasi'])) {
+        if ($category && in_array($category, ['podcast', 'edukasi', 'variety show', 'iklan komersial'])) {
             $filteredVideos = Video::where('category', $category)
                 ->orderBy('created_at', 'desc')
                 ->get();
         }
 
-        return view('index', compact('heroVideo', 'podcasts', 'edukasi', 'filteredVideos', 'category'));
+        return view('index', compact('heroVideo', 'podcasts', 'edukasi', 'varietyShows', 'iklanKomersial', 'filteredVideos', 'category'));
     }
 
     public function show(Video $video)
@@ -49,7 +57,7 @@ class VideoController extends Controller
     {
         $category = $request->query('category');
 
-        if (!$category || !in_array($category, ['podcast', 'edukasi'])) {
+        if (!$category || !in_array($category, ['podcast', 'edukasi', 'variety show', 'iklan komersial'])) {
             return redirect()->route('home');
         }
 
@@ -66,7 +74,7 @@ class VideoController extends Controller
         $validated = $request->validate([
             'title'      => 'required|string|max:255',
             'description' => 'nullable|string',
-            'category'   => 'required|in:podcast,edukasi',
+            'category'   => 'required|in:podcast,edukasi,variety show,iklan komersial',
             'type'       => 'required|in:youtube,file',
             'url'        => 'nullable|url|required_if:type,youtube',
             'video_file' => 'nullable|file|mimes:mp4,mov,avi,webm|max:512000|required_if:type,file',

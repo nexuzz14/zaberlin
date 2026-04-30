@@ -53,7 +53,9 @@
             class="input-field w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-blue-500 transition-all appearance-none cursor-pointer">
             <option value="" class="bg-navy" disabled {{ !old('category') ? 'selected' : '' }}>Pilih...</option>
             <option value="podcast" class="bg-navy" {{ old('category') === 'podcast' ? 'selected' : '' }}>🎙 Podcast</option>
+            <option value="variety show" class="bg-navy" {{ old('category') === 'variety show' ? 'selected' : '' }}>🎭 Variety Show</option>
             <option value="edukasi" class="bg-navy" {{ old('category') === 'edukasi' ? 'selected' : '' }}>📚 Edukasi</option>
+            <option value="iklan komersial" class="bg-navy" {{ old('category') === 'iklan komersial' ? 'selected' : '' }}>🎬 Iklan Komersial</option>
           </select>
         </div>
 

@@ -80,6 +80,24 @@
                                 </span>
                                 Edukasi
                             </a>
+                            <div class="h-px bg-white/5 mx-3"></div>
+                            <a href="{{ route('home', ['category' => 'variety show']) }}"
+                               class="flex items-center gap-3 px-4 py-3 text-sm transition-all duration-150 {{ request()->query('category') === 'variety show' ? 'text-white bg-purple-600/20' : 'text-slate-300 hover:text-white hover:bg-white/10' }}"
+                               id="nav-variety-show">
+                                <span class="w-6 h-6 rounded-md bg-purple-600/20 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                </span>
+                                Variety Show
+                            </a>
+                            <div class="h-px bg-white/5 mx-3"></div>
+                            <a href="{{ route('home', ['category' => 'iklan komersial']) }}"
+                               class="flex items-center gap-3 px-4 py-3 text-sm transition-all duration-150 {{ request()->query('category') === 'iklan komersial' ? 'text-white bg-yellow-600/20' : 'text-slate-300 hover:text-white hover:bg-white/10' }}"
+                               id="nav-iklan-komersial">
+                                <span class="w-6 h-6 rounded-md bg-yellow-600/20 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-3.5 h-3.5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                </span>
+                                Iklan Komersial
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -121,6 +139,8 @@
                     <p class="px-4 pt-2 pb-1 text-xs font-semibold text-slate-500 uppercase tracking-widest">Kategori</p>
                     <a href="{{ route('home', ['category' => 'podcast']) }}" class="px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all pl-6">🎙 Podcast</a>
                     <a href="{{ route('home', ['category' => 'edukasi']) }}" class="px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all pl-6">📚 Edukasi</a>
+                    <a href="{{ route('home', ['category' => 'variety show']) }}" class="px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all pl-6">🎭 Variety Show</a>
+                    <a href="{{ route('home', ['category' => 'iklan komersial']) }}" class="px-4 py-2.5 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 transition-all pl-6">🎬 Iklan Komersial</a>
                     <a href="{{ route('video.upload') }}" class="px-4 py-2.5 rounded-lg text-sm font-medium text-red-400 hover:text-white hover:bg-red-600/20 transition-all">+ Upload Video</a>
                 </div>
             </div>
